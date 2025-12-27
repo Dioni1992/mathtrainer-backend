@@ -1,7 +1,12 @@
 package com.mathtrainer.api.model;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
 import java.util.Random;
 
+@Entity
+@DiscriminatorValue("fracao")
 public class EquacaoFracao extends Equacao {
 
     private final double a, b;
@@ -32,7 +37,7 @@ public class EquacaoFracao extends Equacao {
         return resposta;
     }
 
-    @Override
+
     public String getExplicacao(double respostaUsuario) {
         return String.format("Multiplique ambos os lados por %s: %s x + %s = 0 → x = %s", formatNumber(a), formatNumber(a), formatNumber(b), formatNumber(resposta));
     }

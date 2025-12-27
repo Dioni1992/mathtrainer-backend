@@ -1,20 +1,70 @@
 package com.mathtrainer.api.model;
 
-public abstract class Equacao {
+import jakarta.persistence.*;
+import java.util.UUID;
 
-    // enunciado legível para front
-    public abstract String getEnunciado();
+@Entity
+@Table(name = "equacoes")
+public class Equacao {
 
-    // resposta correta como double
-    public abstract double getRespostaCorreta();
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
 
-    // explicação que pode usar a resposta do usuário
-    public abstract String getExplicacao(double respostaUsuario);
+    private String tipo;
+    private String enunciado;
+    private double respostaCorreta;
+    private String explicacao;
 
-    // checa a tentativa (double) com tolerância relativa
-    public boolean verificarResposta(double tentativa) {
-        double esperado = getRespostaCorreta();
-        double eps = 1e-6; // tolerância pequena (ajustável)
-        return Math.abs(tentativa - esperado) <= Math.max(eps, Math.abs(esperado) * 1e-6);
+    public Equacao() {}
+
+    public Equacao(String tipo, String enunciado, double respostaCorreta, String explicacao) {
+        this.tipo = tipo;
+        this.enunciado = enunciado;
+        this.respostaCorreta = respostaCorreta;
+        this.explicacao = explicacao;
     }
+
+    // Getters e Setters
+    public UUID getId() {
+
+        return id;
+    }
+    public void setId(UUID id)
+    { this.id = id;
+    }
+
+    public String getTipo()
+    { return tipo;
+    }
+    public void setTipo(String tipo)
+    { this.tipo = tipo;
+    }
+
+    public String getEnunciado()
+    { return enunciado;
+    }
+    public void setEnunciado(String enunciado)
+    { this.enunciado = enunciado;
+    }
+
+    public double getRespostaCorreta()
+    { return respostaCorreta;
+    }
+    public void setRespostaCorreta(double respostaCorreta)
+    { this.respostaCorreta = respostaCorreta;
+    }
+
+    public String getExplicacao()
+    { return explicacao;
+    }
+    public void setExplicacao(String explicacao)
+    { this.explicacao = explicacao;
+    }
+
+    public boolean verificarResposta(double respostaUsuario)
+    {
+        return Double.compare(respostaUsuario, respostaCorreta) == 0;
+    }
+
 }

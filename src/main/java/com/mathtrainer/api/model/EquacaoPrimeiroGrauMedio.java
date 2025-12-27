@@ -1,7 +1,12 @@
 package com.mathtrainer.api.model;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
 import java.util.Random;
 
+@Entity
+@DiscriminatorValue("primeiro_medio")
 public class EquacaoPrimeiroGrauMedio extends Equacao {
 
     private final double a, b, c;
@@ -33,7 +38,7 @@ public class EquacaoPrimeiroGrauMedio extends Equacao {
         return resposta;
     }
 
-    @Override
+
     public String getExplicacao(double respostaUsuario) {
         return String.format("Passe %.0f para o outro lado: %.0fx = %.0f → x = %s", b, a, (c - b), formatNumber(resposta));
     }

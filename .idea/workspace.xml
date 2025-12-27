@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06ed9220-51dc-4377-b250-56f27a1378f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/config/DataSeed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/controller/ExerciseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/AuthLoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/AuthRegisterDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/AuthResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/ExerciseResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/Exercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/ExerciseAnswer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/ExerciseOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/ExerciseType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/Ranking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/UserProgress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/UserStats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/EquacaoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/ExerciseAnswerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/ExerciseOptionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/ExerciseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/ExerciseTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/RankingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/UserProgressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/repository/UserStatsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/ExerciseTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/RankingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/UserProgressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/UserStatsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/controller/ExercicioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/GerarRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/GerarRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/VerifyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/dto/VerifyRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/Equacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/Equacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoFracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoFracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoPrimeiroGrauMedio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoPrimeiroGrauMedio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoPrimeiroGrauSimples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoPrimeiroGrauSimples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoRaizQuadrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoRaizQuadrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoSegundoGrau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/model/EquacaoSegundoGrau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/ExerciseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/ExerciseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/GeradorEquacoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mathtrainer/api/service/GeradorEquacoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/MathTrainerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/MathTrainerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/controller/ExercicioController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/dto/GerarRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/dto/GerarRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/dto/VerifyRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/dto/VerifyRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/Equacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/Equacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoFracao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoFracao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoPrimeiroGrauMedio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoPrimeiroGrauMedio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoPrimeiroGrauSimples.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoPrimeiroGrauSimples.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoRaizQuadrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoRaizQuadrada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoSegundoGrau.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/model/EquacaoSegundoGrau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/service/ExerciseService$VerifyResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/service/ExerciseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/service/ExerciseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/service/GeradorEquacoes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mathtrainer/api/service/GeradorEquacoes.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="35ylWsJGbijs4hG6aLel2YGRYhR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MathTrainerApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/ProjetoMatematica",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mathtrainer.api.repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MathTrainerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mathtrainer.api.MathTrainerApplication" />
+      <module name="mathtrainer-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mathtrainer.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MathTrainerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06ed9220-51dc-4377-b250-56f27a1378f9" name="Changes" comment="" />
+      <created>1764090233814</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764090233814</updated>
+    </task>
+    <servers />
+  </component>
+</project>

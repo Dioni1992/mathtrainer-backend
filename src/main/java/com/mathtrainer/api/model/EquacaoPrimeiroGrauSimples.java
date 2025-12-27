@@ -1,7 +1,12 @@
 package com.mathtrainer.api.model;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
 import java.util.Random;
 
+@Entity
+@DiscriminatorValue("primeiro_simples")
 public class EquacaoPrimeiroGrauSimples extends Equacao {
 
     private final double a, b;
@@ -14,33 +19,20 @@ public class EquacaoPrimeiroGrauSimples extends Equacao {
         this.b = r.nextInt(41) - 20;      // -20..20
         this.resposta = -b / a;
         this.enunciado = String.format("%.0fx + %.0f = 0", a, b);
-    }
 
-    public EquacaoPrimeiroGrauSimples(double a, double b) {
-        this.a = a;
-        this.b = b;
-        this.resposta = -b / a;
-        this.enunciado = String.format("%sx + %s = 0", formatNumber(a), formatNumber(b));
-    }
-
-    @Override
-    public String getEnunciado() {
-        return enunciado;
+        // Preenche a entidade Equacao corretamente
+        super.setTipo("primeiro_simples");
+        super.setEnunciado(this.enunciado);
+        super.setRespostaCorreta(this.resposta);
+        super.setExplicacao(getExplicacao());
     }
 
     @Override
-    public double getRespostaCorreta() {
-        return resposta;
-    }
-
-    @Override
-    public String getExplicacao(double respostaUsuario) {
-        return String.format("Isolando x: %.0fx = %.0f → x = %s", a, -b, formatNumber(resposta));
-    }
-
-    @Override
-    public boolean verificarResposta(double tentativa) {
-        return super.verificarResposta(tentativa);
+    public String getExplicacao() {
+        return String.format(
+                "Isolando x: %.0fx = %.0f → x = %s",
+                a, -b, formatNumber(resposta)
+        );
     }
 
     private String formatNumber(double v) {

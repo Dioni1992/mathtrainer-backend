@@ -1,7 +1,12 @@
 package com.mathtrainer.api.model;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
 import java.util.Random;
 
+@Entity
+@DiscriminatorValue("raiz_quadrada")
 public class EquacaoRaizQuadrada extends Equacao {
 
     // Interpretamos enunciado como "√x = r" -> resposta = r^2
@@ -32,7 +37,7 @@ public class EquacaoRaizQuadrada extends Equacao {
         return resposta;
     }
 
-    @Override
+
     public String getExplicacao(double respostaUsuario) {
         return String.format("Eleve ambos os lados ao quadrado: x = %s", formatNumber(resposta));
     }

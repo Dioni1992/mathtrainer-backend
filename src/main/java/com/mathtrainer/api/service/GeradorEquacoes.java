@@ -1,14 +1,14 @@
 package com.mathtrainer.api.service;
 
 import com.mathtrainer.api.model.*;
-
 import java.util.Random;
 
 public class GeradorEquacoes {
+
     private final Random random = new Random();
 
     public Equacao gerarEquacaoAleatoria() {
-        int tipo = random.nextInt(5); // 5 tipos
+        int tipo = random.nextInt(5);
         return switch (tipo) {
             case 0 -> new EquacaoPrimeiroGrauSimples();
             case 1 -> new EquacaoPrimeiroGrauMedio();

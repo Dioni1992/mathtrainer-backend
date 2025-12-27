@@ -1,5 +1,10 @@
 package com.mathtrainer.api.model;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("segundo_grau")
 public class EquacaoSegundoGrau extends Equacao {
 
     private final double a, b, c;
@@ -37,7 +42,7 @@ public class EquacaoSegundoGrau extends Equacao {
         return raiz1;
     }
 
-    @Override
+
     public String getExplicacao(double respostaUsuario) {
         double delta = b*b - 4*a*c;
         return String.format("Bhaskara: Δ = %.1f → raízes: %s e %s. Você respondeu: %s",

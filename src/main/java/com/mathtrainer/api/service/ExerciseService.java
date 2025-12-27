@@ -1,59 +1,34 @@
 package com.mathtrainer.api.service;
 
-import com.mathtrainer.api.model.Equacao;
+import com.mathtrainer.api.model.*;
+import com.mathtrainer.api.repository.ExerciseRepository;
+import com.mathtrainer.api.repository.ExerciseTypeRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.UUID;
 
 @Service
 public class ExerciseService {
-
+    private final ExerciseRepository exerciseRepo;
+    private final ExerciseTypeRepository typeRepo;
     private final GeradorEquacoes gerador = new GeradorEquacoes();
-    private final Map<UUID, Equacao> store = new ConcurrentHashMap<>();
 
-    public UUID createExercise(String tipo) {
-        Equacao eq = (tipo == null || tipo.isBlank())
-                ? gerador.gerarEquacaoAleatoria()
-                : gerador.gerarEquacaoPorTipo(tipo);
-
-        UUID id = UUID.randomUUID();
-        store.put(id, eq);
-        return id;
+    public ExerciseService(ExerciseRepository exerciseRepo, ExerciseTypeRepository typeRepo){
+        this.exerciseRepo = exerciseRepo; this.typeRepo = typeRepo;
     }
 
-    public Equacao getExercise(UUID id) {
-        return store.get(id);
+    public Exercise createRandomExercise(String tipoKey) {
+        // If tipoKey provided, try find type; else pick default
+        ExerciseType type = null;
+        if (tipoKey != null) type = typeRepo.findAll().stream().filter(t->t.getName().equalsIgnoreCase(tipoKey)).findFirst().orElse(null);
+        // generate using gerador (you already have GeradorEquacoes producing subclassless Equacao earlier — adapt)
+        // We'll create a simple exercise instance with the gerador helper returning an Exercise-like data
+        com.mathtrainer.api.model.Equacao eqPojo = gerador.gerarEquacaoPorTipo(tipoKey==null?"simples":tipoKey);
+        // Map to Exercise entity
+        ExerciseType chosenType = (type != null) ? type : typeRepo.findAll().stream().findFirst().orElse(null);
+        Exercise ex = new Exercise(chosenType, eqPojo.getEnunciado(), eqPojo.getRespostaCorreta(), eqPojo.getExplicacao());
+        return exerciseRepo.save(ex);
     }
 
-    public VerifyResult verify(UUID id, double respostaUsuario) {
-        Equacao eq = store.get(id);
-        if (eq == null) return null;
-
-        boolean correto = eq.verificarResposta(respostaUsuario);
-        String explicacao = eq.getExplicacao(respostaUsuario);
-        double respostaCorreta = eq.getRespostaCorreta();
-
-        return new VerifyResult(correto, respostaCorreta, explicacao);
-    }
-
-    public boolean remove(UUID id) {
-        return store.remove(id) != null;
-    }
-
-    public List<UUID> listActive() {
-        return new ArrayList<>(store.keySet());
-    }
-
-    public static class VerifyResult {
-        public final boolean correto;
-        public final double respostaCorreta;
-        public final String explicacao;
-
-        public VerifyResult(boolean correto, double respostaCorreta, String explicacao) {
-            this.correto = correto;
-            this.respostaCorreta = respostaCorreta;
-            this.explicacao = explicacao;
-        }
-    }
+    public Exercise getById(UUID id){ return exerciseRepo.findById(id).orElse(null); }
 }
